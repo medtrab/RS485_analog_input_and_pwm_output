@@ -1,7 +1,6 @@
 ![](./resources/official_armmbed_example_badge.png)
-# Blinky Mbed OS example
+# RS485 Example on Mbed OS6 wit use if ADC reading PWM output
 
-The example project is part of the [Arm Mbed OS Official Examples](https://os.mbed.com/code/) and is the [getting started example for Mbed OS](https://os.mbed.com/docs/mbed-os/v5.14/quick-start/index.html). It contains an application that repeatedly blinks an LED on supported [Mbed boards](https://os.mbed.com/platforms/).
 
 You can build the project with all supported [Mbed OS build tools](https://os.mbed.com/docs/mbed-os/latest/tools/index.html). However, this example project specifically refers to the command-line interface tool [Arm Mbed CLI](https://github.com/ARMmbed/mbed-cli#installing-mbed-cli).
 (Note: To see a rendered example you can import into the Arm Online Compiler, please see our [import quick start](https://os.mbed.com/docs/mbed-os/latest/quick-start/online-with-the-online-compiler.html#importing-the-code).)
@@ -23,7 +22,7 @@ You can build the project with all supported [Mbed OS build tools](https://os.mb
 
 ## Application functionality
 
-The `main()` function is the single thread in the application. It toggles the state of a digital output connected to an LED on the board.
+The `main()` function is the single thread in the application. It send data through serial RS485 with adc reading of voltage on pin A0 and ajust PWM output according to the adc input and also sending duty cycle.
 
 ## Building and running
 
@@ -32,7 +31,6 @@ The `main()` function is the single thread in the application. It toggles the st
     ```bash
     $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash
     ```
-The binary is located at `./BUILD/<TARGET>/<TOOLCHAIN>/mbed-os-example-blinky.bin`.
 
 Alternatively, you can manually copy the binary to the board, which you mount on the host computer over USB.
 
@@ -41,13 +39,6 @@ Depending on the target, you can build the example project with the `GCC_ARM`, `
 ```bash
 $ mbed compile -S
 ```
-
-## Expected output
-The LED on your target turns on and off every 500 milliseconds.
-
-
-## Troubleshooting
-If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it.
 
 ## Related Links
 
