@@ -1,5 +1,5 @@
-![](./resources/official_armmbed_example_badge.png)
-# RS485 Example on Mbed OS6 wit use if ADC reading PWM output
+
+# RS485 Example on Mbed OS 6 with the use if ADC reading PWM output
 
 
 You can build the project with all supported [Mbed OS build tools](https://os.mbed.com/docs/mbed-os/latest/tools/index.html). However, this example project specifically refers to the command-line interface tool [Arm Mbed CLI](https://github.com/ARMmbed/mbed-cli#installing-mbed-cli).
@@ -7,17 +7,6 @@ You can build the project with all supported [Mbed OS build tools](https://os.mb
 
 1. [Install Mbed CLI](https://os.mbed.com/docs/mbed-os/latest/quick-start/offline-with-mbed-cli.html).
 
-1. Clone this repository on your system, and change the current directory to where the project was cloned:
-
-    ```bash
-    $ git clone git@github.com:armmbed/mbed-os-example-blinky && cd mbed-os-example-blinky
-    ```
-
-    Alternatively, you can download the example project with Arm Mbed CLI using the `import` subcommand:
-
-    ```bash
-    $ mbed import mbed-os-example-blinky && cd mbed-os-example-blinky
-    ```
 
 
 ## Application functionality
